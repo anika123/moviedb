@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row" *ngIf="movie">
+    <div class="col-md-12">
+      <div class="col-md-4" *ngIf="movie.poster_path">
+        <img class="img-responsive" src="http://image.tmdb.org/t/p/w500{{movie.poster_path}}" />
+      </div>
+      <div class="col-md-8">
+        <div class="col-md-12">
+          <table class="table table-bordered">
+            <tr>
+              <td><strong>Title</strong></td>
+              <td>{{movie.title}}</td>
+            </tr>
+            <tr>
+              <td><strong>Synopsis</strong></td>
+              <td>{{movie.overview}}</td>
+            </tr>
+            <tr>
+              <td><strong>Release Date</strong></td>
+              <td>{{movie.release_date | date}}</td>
+            </tr>
+            <tr>
+              <td><strong>Genre</strong></td>
+              <td>{{movie.release_date | date}}
+                
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
